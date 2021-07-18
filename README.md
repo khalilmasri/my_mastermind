@@ -1,5 +1,5 @@
 # my_mastermind
-#
+
 **SPECIFICATIONS**
 
 Write a program called mastermind; it will be an implementation of the famous game.

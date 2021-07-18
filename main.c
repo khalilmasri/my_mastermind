@@ -1,4 +1,4 @@
-#include "my_mastermind.h"
+#include "my_mastermind.c"
 
 int main(int argc, char *argv[]){
     int option, attempts = 10;

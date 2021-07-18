@@ -1,28 +1,75 @@
 # my_mastermind
-Hello there player
+#
+**SPECIFICATIONS**
 
-Here is a small guide for you to be able to play my_mastermind game to it's full potinal 
+Write a program called mastermind; it will be an implementation of the famous game.
+#
+**NAME**
 
-As a default options you will be able to have:
- * A random generated number made of 4 digits between the numbers 0,1,2,3,4,5,6,7.
- * You got 10 rounds to crack the code.
+my_mastermind
+#
+**SYNOPSIS**
 
-Let's start with how to run the game:
-1- Run command 'make' in the prompt.
-2- Run the game with ./my_mastermind.
-3- ENJOY!
+my_mastermind [-ct]
+#
 
-* Dont forget to make clean after you finish playing :)
+**DESCRIPTION**
 
-Hey, you there want some cheat code?
+Mastermind is a game composed of 8 pieces of different colors.
+A secret code is then composed of 4 distinct pieces.
 
-Did you know that you could make the game easier or difficult by entering some cheat codes?
+The player has 10 attempts to find the secret code.
+After each input, the game indicates to the player the number of well placed pieces and the number of misplaced pieces.
 
-Let me give you the cheat code:
- * if you run ./my_mastermind -c followed by 4 digits code the you want (example "0000") then the code will be not random and it will be you input code.
- * if you run ./my_mastermind -t followed by a number you can decide how many rounds you want to play.
- * if you run ./my_mastermind -p followed by characters in this order (example: a b c d e f g h) you can enter 8 pieces of your choice.
+Pieces will be '0' '1' '2' '3' '4' '5' '6' '7'.
+
+If the player finds the code, he wins, and the game stops.
+A misplaced piece is a piece that is present in the secret code butthat is not in a good position.
+
+You must read the player's input from the standard input.
+
+Your program will also receive the following parameters:
+
+-c [CODE]: specifies the secret code. If no code is specified, a random code will be generated.
+
+-t [ATTEMPTS]: specifies the number of attempts; by default, the playerhas 10 attempts.
+
+-p [PIECES]: specifies and changes pieces; by default '0' '1' '2' '3' '4' '5' '6' '7'
  
- ATTENTION REQUIRED: YOU CAN'T RUN MORE THAN 1 CHEAT CODE AT A TIME!
+ #
+ Example 00
+```
+PROMPT>./my_mastermind -c "0123"
+Will you find the secret code?
+---
+Round 0
+>1456
+Well placed pieces: 0
+Misplaced pieces: 1
+---
+Round 1
+>tata
+Wrong input!
+>4132
+Well placed pieces: 1
+Misplaced pieces: 2
+---
+Round 2
+>0123
+Congratz! You did it!
+```
+#
 
- GOOD LUCK AND HOPE YOU LIKE IT :)
+**AUTHORIZED FUNCTIONS**
+
+printf(3)
+
+write(2)
+
+read(2)
+
+rand() (/ srand())
+
+time()
+
+atoi()
